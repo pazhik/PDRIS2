@@ -1,0 +1,5 @@
+com\example\fileAPI\repository\FileRepository.class
+com\example\fileAPI\repository\FileRepositoryImpl.class
+com\example\fileAPI\controller\FileController.class
+com\example\fileAPI\FileApiApplication.class
+com\example\fileAPI\service\FileService.class

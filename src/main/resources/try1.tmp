@@ -1,0 +1,20 @@
+//        DataQualityControlProtocolEntity protocolEntity = DataQualityControlProtocolEntity.builder().id(0L).protocolText(ClobProxy.generateProxy("[]")).build();
+//        long id;
+//        try (Connection appConnection = dataSource.getConnection();
+//             PreparedStatement psSelect = appConnection.prepareStatement("select next value for dqual_dataqualityprotocol_sq");
+//             PreparedStatement psInsert = appConnection.prepareStatement("insert into dqual_dataqualityprotocol (protocoltext, id) values (?, ?)")) {
+//            appConnection.setAutoCommit(false);
+//            try (ResultSet rss = psSelect.executeQuery()) {
+//                rss.next();
+//                id = rss.getLong(1);
+//            }
+//            psInsert.setClob(1, ClobProxy.generateProxy("[]"));
+//            psInsert.setLong(2, id);
+//            psInsert.execute();
+//            appConnection.commit();
+//        } catch (SQLException throwables) {
+//            logger.error(throwables);
+//            throwables.printStackTrace();
+//        }
+//        return protocolEntity;
+        return repository.save(proto
